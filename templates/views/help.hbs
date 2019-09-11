@@ -4,13 +4,36 @@
         <title>Help</title>
         <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="css/styles.css">
-        <style></style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Merienda|Nova+Cut|Trade+Winds&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     </head>
     <body>
-        <div class="main-content">
+        <div class="main-content container">
             {{>header}}
             <p>{{helpText}}</p>
-
+            <p>
+                This weather forecasting is done using two very famous API's. 
+                <ul>
+                    <li>Darksky</li>
+                    <li>Mapbox</li>
+                </ul>
+            </p>
+            <p>
+                Go check out <a href="https://darksky.net/dev" class="btnwrap">&nbsp; Dark Sky API &nbsp;</a> it is really amazing.
+            </p>
+            <p>
+                Also, check <a href="https://docs.mapbox.com/" class="btnwrap">&nbsp; Mapbox API &nbsp;</a>
+            </p>
+            <p>
+                Here is the link of <a href="https://github.com/Mehul2205/Weather-Website"  class="btnwrap">&nbsp; Weather-Forecast project &nbsp;</a> (Github repository)
+            </p>
+            <p>
+                If you have any issues you can contact me on my <a href="mailto:mehulpatni.2205@gmail.com"  class="btnwrap">&nbsp; email-id. &nbsp;</a>
+            </p>
         </div>
         {{>footer}}
     </body>

@@ -16,9 +16,10 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const location = search.value
-
+    const code ='<div class="spinner-border text-primary" role="status">'+
+    '<span class="sr-only">Loading...</span>'+'</div>'
     M1.textContent = 'Loading..'
-    M2.textContent = ''
+    M2.innerHTML = code
 
     fetch('/weather?address='+encodeURIComponent(location)).then((response) => {
         response.json().then((data) => {
