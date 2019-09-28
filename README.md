@@ -50,14 +50,12 @@ This <a href = "https://mehul2205-weather-website.herokuapp.com"><b>PROJECT</b><
 
 
 ## Created By:
-<i>Mehul Patni</i>
-<footer>
-  <a href="http://www.linkedin.com/in/mehul-patni">Linkedin
-  </a>
-  <a href="https://github.com/Mehul2205" class="mehul">Github
-  </a>
-  <a href="https://www.facebook.com/mehul.patni.370" class="mehul">Facebook
-  </a>
-  <a href="https://www.instagram.com/mehulpatni2205/" class="mehul">Instagram
-  </a>
-</footer>
+<b><i>Mehul Patni</i></b><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="./Images/linkedin-in-brands.svg" height="30px" padding="1rem">](http://www.linkedin.com/in/mehul-patni)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="./Images/github-brands.svg" height="30px" padding="20%">](https://github.com/Mehul2205)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="./Images/facebook-brands.svg" height="30px" padding="40">](https://www.facebook.com/mehul.patni.370)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="./Images/instagram-brands.svg" height="30px" padding="auto">](https://www.instagram.com/mehulpatni2205/)
