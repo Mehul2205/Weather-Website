@@ -40,7 +40,7 @@ It is implemented using NodeJs.
 > node 1_express.js
 ```
 * And your project is live on **localhost:3000**
-* Hit <a href="star Mehul2205/Weather-Website">star</a> button if you like this project.
+* Hit **star button** if you like this project. :+1:
 
 ## About
 <p>
