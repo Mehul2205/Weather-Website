@@ -47,6 +47,7 @@ header a:hover{
 
 .potrait{
     width: 250px;
+    display: -webkit-box;
 }
 
 input{
@@ -88,4 +89,13 @@ p{
 .btnwrap:hover{
     text-decoration: none;
     color: lightblue;
+}
+
+.mySlider{
+    display: none;
+}
+@media (max-width: 640px){
+    .mySlider{
+        display: block;
+    }
 }
