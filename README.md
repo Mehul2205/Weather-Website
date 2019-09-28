@@ -44,8 +44,8 @@ It is implemented using NodeJs.
 
 ## About
 <p>
-This <a href = "https://mehul2205-weather-website.herokuapp.com">**PROJECT**<a> is also hosted on herokuapp.com<br>
-**Please Visit !!!.** 
+This <a href = "https://mehul2205-weather-website.herokuapp.com"><b>PROJECT</b><a> is also hosted on herokuapp.com<br>
+    <b>Please Visit !!!.</b>
 </p>
 
 
