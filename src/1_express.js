@@ -4,6 +4,19 @@ const hbs = require('hbs')
 const request = require('request')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const NodeGeocoder = require('node-geocoder');
+ 
+const options = {
+  provider: 'google',
+ 
+  // Optional depending on the providers
+  httpAdapter: 'https', // Default
+  apiKey: 'ccf70a5c58a84bc4bbc004d14ddd2e6f', // for Mapquest, OpenCage, Google Premier
+  formatter: null         // 'gpx', 'string', ...
+};
+ 
+const geocoder = NodeGeocoder(options);
+
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -45,17 +58,15 @@ app.get('/help', (req, res)=> {
 })
 
 app.get('/weather', (req, res)=> {
-    if(!req.query.address){
+    if(!req.query.address && !req.query.latitude && !req.query.longitude){
         return res.send({
-            error: 'Address query is required'
+            error: 'Loading..'
         })
         // req.query.address = 'Nagpur'
-    }
-    geocode(req.query.address, (error, {longitude, latitude, location} = {}) =>{
-        if(error){
-            return res.send({error})
-        }
-        forecast(longitude, latitude, (error, ForecastData) => {
+    }else if(!req.query.address){
+        
+        location = {}
+        forecast(req.query.longitude, req.query.latitude, (error, ForecastData) => {
             if(error){
                 return res.send({error})
             }
@@ -65,8 +76,23 @@ app.get('/weather', (req, res)=> {
                 address: req.query.address
             })
         })
-        
-    })
+    }else if(!req.query.longitude && !req.query.latitude){
+        geocode(req.query.address, (error, {longitude, latitude, location} = {}) =>{
+            if(error){
+                return res.send({error})
+            }
+            forecast(longitude, latitude, (error, ForecastData) => {
+                if(error){
+                    return res.send({error})
+                }
+                res.send({
+                    forecast: ForecastData,
+                    location,
+                    address: req.query.address
+                })
+            })
+        })
+    }
 })
 
 app.get('/products', (req,res) => {
